@@ -2,9 +2,9 @@ import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center w-full h-20 px-16 bg-white">
+    <nav className="flex justify-between items-center w-full h-20 px-20 bg-white">
       <div className="flex items-center">
-        <h1 className="font-bold text-2xl">Webifyr</h1>
+        <h1 className="font-bold text-3xl">Webifyr</h1>
       </div>
       <div className="flex items-center font-medium">
         <Link
@@ -32,7 +32,8 @@ export default function Navbar() {
           Projects
         </Link>
         <Link
-          href=""
+          href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
+          target="_blank"
           className={`${buttonVariants({
             variant: "default",
           })} h-8 rounded-lg`}
