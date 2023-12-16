@@ -66,7 +66,7 @@ export default function Services() {
       <h1 className="text-5xl font-bold" id="services">
         Services
       </h1>
-      <p className="text-2xl font-semibold text-gray-800">
+      <p className="text-2xl font-semibold text-gray">
         Here is a list of all our services.
       </p>
       <div className="flex flex-row flex-wrap justify-between">
