@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={significa.className}>
+      <body className={`${significa.className} px-40`}>
         <Navbar />
         {children}
       </body>

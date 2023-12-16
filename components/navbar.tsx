@@ -2,11 +2,11 @@ import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center w-full h-20 px-20 bg-white">
+    <nav className="flex justify-between items-center w-full h-20">
       <div className="flex items-center">
-        <h1 className="font-bold text-3xl">Webifyr</h1>
+        <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
-      <div className="flex items-center font-medium">
+      <div className="flex items-center font-medium text-sm">
         <Link
           href="https://nextjs.org/docs"
           target="_blank"
@@ -29,14 +29,14 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="mr-4"
         >
-          Projects
+          Contact
         </Link>
         <Link
           href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
           target="_blank"
           className={`${buttonVariants({
             variant: "default",
-          })} h-8 rounded-lg`}
+          })} h-8`}
         >
           Book a call
         </Link>
