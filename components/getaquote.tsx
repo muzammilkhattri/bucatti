@@ -57,7 +57,7 @@ export default function Getaquote() {
             className="bg-[#1b1b1b] text-foreground mt-4 w-full h-11 border-[#303030] border"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("documents").click();
+              document.getElementById("documents")?.click();
             }}
           >
             <FilePlus2 className="mr-2" size="15" />
