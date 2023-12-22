@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import { useLogSnag } from "@logsnag/next";
 import * as React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, FilePlus2 } from "lucide-react";
@@ -23,28 +24,25 @@ export default function Getaquote() {
   const [email, setEmail] = useState("");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
-
+  const { setUserId, track, identify } = useLogSnag();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let API = "plane_api_c07a513441fa4e449e3c9370d3e5b20b";
     let description = `Name: ${name} \n Email: ${email} \n Budget: ${budget} \n Message: ${message}`;
-    const data = {
-      name: name,
-      description: description,
-    };
+    //disable https check
+
     try {
-      const res = await axios.post(
-        "http://170.64.210.79/api/v1/workspaces/webifyr/projects/5f9c6165-46ff-42df-9768-c8690d07c3a3/issues/",
-        data,
-        {
-          headers: {
-            Authorization: `X-API-Key ${API}`,
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
+      let res = track({
+        channel: "leads",
+        event: "New Leads",
+        icon: "💰",
+        notify: true,
+        description: description,
+      });
       console.log(res);
-      toast.success("Message sent successfully");
+      toast.success(
+        "Message sent successfully, we will get back to you soon through your email"
+      );
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
