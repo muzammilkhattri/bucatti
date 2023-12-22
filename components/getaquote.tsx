@@ -11,14 +11,49 @@ import {
   SelectValue,
 } from "./ui/select";
 import * as React from "react";
-import Script from "next/script";
 import { Button } from "./ui/button";
 import { ArrowRight, FilePlus2 } from "lucide-react";
 import Link from "next/link";
-
+import { Toaster, toast } from "sonner";
+import { useState } from "react";
+import axios from "axios";
+import { allowedNodeEnvironmentFlags } from "process";
 export default function Getaquote() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    let API = "plane_api_c07a513441fa4e449e3c9370d3e5b20b";
+    let description = `Name: ${name} \n Email: ${email} \n Budget: ${budget} \n Message: ${message}`;
+    const data = {
+      name: name,
+      description: description,
+    };
+    try {
+      const res = await axios.post(
+        "http://170.64.210.79/api/v1/workspaces/webifyr/projects/5f9c6165-46ff-42df-9768-c8690d07c3a3/issues/",
+        data,
+        {
+          headers: {
+            Authorization: `X-API-Key ${API}`,
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      );
+      console.log(res);
+      toast.success("Message sent successfully");
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+  };
+
   return (
     <section className="flex flex-row justify-between w-full mt-20">
+      <Toaster position="bottom-right" />
       <div className="flex flex-col justify-start items-start w-1/2">
         <h1 className="text-7xl font-bold ">
           Get a quote, <br></br>
@@ -27,17 +62,36 @@ export default function Getaquote() {
         <p className="text-2xl font-semibold"></p>
       </div>
       <div className="flex items-center w-1/2 rounded-md">
-        <form className="w-full">
+        <form className="w-full" onSubmit={(e) => handleSubmit(e)}>
           <div className="flex flex-row justify-between w-full">
-            <Input type="text" placeholder="Name" className="w-[48%]" />
+            <Input
+              type="text"
+              placeholder="Name"
+              className="w-[48%]"
+              onChange={(e) => setName(e.currentTarget.value)}
+              required
+            />
             <Input
               type="text"
               placeholder="Email Address"
               className="w-[48%]"
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              required
             />
           </div>
-          <Textarea cols={8} rows={10} className="mt-4" placeholder="Message" />
-          <Select>
+          <Textarea
+            cols={8}
+            rows={10}
+            className="mt-4"
+            placeholder="Message"
+            onChange={(e) => setMessage(e.currentTarget.value)}
+            required
+          />
+          <Select
+            onValueChange={(e) => {
+              setBudget(e);
+            }}
+          >
             <SelectTrigger className="mt-4 bg-[#1b1b1b]">
               <SelectValue placeholder="Budget Range" />
             </SelectTrigger>
@@ -52,17 +106,6 @@ export default function Getaquote() {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <Input type="file" className="mt-4 hidden" id="documents" />
-          <Button
-            className="bg-[#1b1b1b] text-foreground mt-4 w-full h-11 border-[#303030] border"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("documents")?.click();
-            }}
-          >
-            <FilePlus2 className="mr-2" size="15" />
-            Relevant Document
-          </Button>
 
           <div className="flex flex-row mt-4 justify-between">
             <div>
