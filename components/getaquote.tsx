@@ -17,14 +17,19 @@ import { ArrowRight, FilePlus2 } from "lucide-react";
 import Link from "next/link";
 import { Toaster, toast } from "sonner";
 import { useState } from "react";
-import axios from "axios";
-import { allowedNodeEnvironmentFlags } from "process";
+
 export default function Getaquote() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [budget, setBudget] = useState("");
   const [message, setMessage] = useState("");
   const { setUserId, track, identify } = useLogSnag();
+  const resetInputs = () => {
+    setName("");
+    setEmail("");
+    setBudget("");
+    setMessage("");
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let API = "plane_api_c07a513441fa4e449e3c9370d3e5b20b";
@@ -43,6 +48,7 @@ export default function Getaquote() {
       toast.success(
         "Message sent successfully, we will get back to you soon through your email"
       );
+      resetInputs();
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
