@@ -32,6 +32,8 @@ export default function Getaquote() {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!name || !email || !budget || !message)
+      return toast.error("Please fill all the fields");
     let API = "plane_api_c07a513441fa4e449e3c9370d3e5b20b";
     let description = `Name: ${name} \n Email: ${email} \n Budget: ${budget} \n Message: ${message}`;
     //disable https check
@@ -74,6 +76,7 @@ export default function Getaquote() {
               className="w-[48%]"
               onChange={(e) => setName(e.currentTarget.value)}
               required
+              value={name}
             />
             <Input
               type="text"
@@ -81,6 +84,7 @@ export default function Getaquote() {
               className="w-[48%]"
               onChange={(e) => setEmail(e.currentTarget.value)}
               required
+              value={email}
             />
           </div>
           <Textarea
@@ -90,11 +94,14 @@ export default function Getaquote() {
             placeholder="Message"
             onChange={(e) => setMessage(e.currentTarget.value)}
             required
+            value={message}
           />
           <Select
             onValueChange={(e) => {
               setBudget(e);
             }}
+            value={budget}
+            required
           >
             <SelectTrigger className="mt-4 bg-[#1b1b1b]">
               <SelectValue placeholder="Budget Range" />
