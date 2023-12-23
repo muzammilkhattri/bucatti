@@ -58,7 +58,7 @@ export default function Getaquote() {
   };
 
   return (
-    <section className="flex flex-row justify-between w-full mt-20">
+    <section className="flex flex-row justify-between w-full mt-20" id="quote">
       <Toaster position="bottom-right" />
       <div className="flex flex-col justify-start items-start w-1/2">
         <h1 className="text-7xl font-bold ">

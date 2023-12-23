@@ -8,18 +8,11 @@ export default function Navbar() {
         <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
       <div className="flex items-center font-medium text-sm">
-        <Link href="/#" rel="noopener noreferrer" className="mr-4">
+        <Link href="/#about" rel="noopener noreferrer" className="mr-4">
           About
         </Link>
         <Link href="/#services" rel="noopener noreferrer" className="mr-4">
           Services
-        </Link>
-        <Link
-          href="https://nextjs.org/learn"
-          rel="noopener noreferrer"
-          className="mr-4"
-        >
-          Projects
         </Link>
 
         <Link
