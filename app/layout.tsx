@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${significa.className} px-40`}>
+      <body className={`${significa.className} sm:px-40 px-0`}>
         <LogSnagProvider
           token="2aa19121e778b23407bc8d80765482ac"
           project="webifyr"
