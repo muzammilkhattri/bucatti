@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "@/components/navbar";
+import { LogSnagProvider } from "@logsnag/next";
 
 const significa = localFont({
   src: [
@@ -34,7 +35,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={significa.className}>
+      <body className={`${significa.className} px-40`}>
+        <LogSnagProvider
+          token="2aa19121e778b23407bc8d80765482ac"
+          project="webifyr"
+        />
         <Navbar />
         {children}
       </body>
