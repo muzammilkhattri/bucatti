@@ -6,8 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import service1 from "../public/service-1.svg";
-import Image from "next/image";
 const services = [
   {
     title: "Website Development",

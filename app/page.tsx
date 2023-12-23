@@ -6,7 +6,7 @@ import About from "@/components/aboutus";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-20">
-      <section className="flex flex-row justify-between w-full">
+      <section className="flex flex-col sm:flex-row justify-between w-full">
         <div className="flex flex-col justify-center items-start w-1/2">
           <h1 className="text-7xl font-bold ">
             Turning Clicks Into Conversions, <br></br>
