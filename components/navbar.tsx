@@ -8,11 +8,7 @@ export default function Navbar() {
         <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
       <div className="flex items-center font-medium text-sm">
-        <Link
-          href="https://nextjs.org/docs"
-          rel="noopener noreferrer"
-          className="mr-4"
-        >
+        <Link href="/#" rel="noopener noreferrer" className="mr-4">
           About
         </Link>
         <Link href="/#services" rel="noopener noreferrer" className="mr-4">
@@ -27,7 +23,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
+          href="/#quote"
           className={`${buttonVariants({
             variant: "default",
           })} h-8 mr-2`}
