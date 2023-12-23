@@ -60,16 +60,16 @@ const services = [
 ];
 export default function Services() {
   return (
-    <div className="mt-40 w-full bg-primary p-20 text-primary-foreground rounded-md">
+    <div className="mt-40 w-full bg-primary p-5 sm:p-20 text-primary-foreground rounded-md">
       <h1 className="text-5xl font-bold" id="services">
         Services
       </h1>
       <p className="text-2xl font-semibold text-gray">
         Here is a list of all our services.
       </p>
-      <div className="flex flex-row flex-wrap justify-between">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-between">
         {services.map((service) => (
-          <div key={service.title} className="flex flex-row w-[40%]">
+          <div key={service.title} className="flex flex-row sm:w-[40%] w-full ">
             <Card className="mt-10 hover:border-white hover:border-3">
               <CardHeader>
                 <CardTitle className="text-xl">{service.title}</CardTitle>

@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between py-20">
       <section className="flex flex-col sm:flex-row justify-between w-full">
         <div className="flex flex-col justify-center items-start w-1/2">
-          <h1 className="text-7xl font-bold ">
+          <h1 className="sm:text-7xl text-5xl font-bold ">
             Turning Clicks Into Conversions, <br></br>
             Dreams Into <span className="text-gray-400">Reality.</span>
           </h1>
