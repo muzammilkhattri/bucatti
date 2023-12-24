@@ -1,6 +1,6 @@
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
-import { ArrowUpRightSquare } from "lucide-react";
+import { ArrowUpRightSquare, DollarSign, ExternalLink } from "lucide-react";
 import { MobileNav } from "./mobile-nav";
 export default function Navbar() {
   return (
@@ -8,30 +8,33 @@ export default function Navbar() {
       <div className="flex items-center">
         <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
-      <div className="hidden gap-6 md:flex items-center font-medium text-md">
-        <Link href="/#about" rel="noopener noreferrer" className="mr-4">
-          About
-        </Link>
+      <div className="hidden gap-6 md:flex items-center font-medium text-lg">
         <Link href="/#services" rel="noopener noreferrer" className="mr-4">
           Services
+        </Link>
+        <Link href="/#about" rel="noopener noreferrer" className="mr-4">
+          About
         </Link>
 
         <Link
           href="/#quote"
           className={`${buttonVariants({
             variant: "default",
-          })} h-8 mr-2`}
+            size: "lg",
+          })} mr-2 text-lg w-18`}
         >
           Get a quote
+          <DollarSign className="ml-1 " size="13" />
         </Link>
         <Link
           href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
           target="_blank"
           className={`${buttonVariants({
             variant: "outline",
-          })} h-8`}
+            size: "lg",
+          })} text-lg`}
         >
-          Book a call <ArrowUpRightSquare className="ml-1 " size="13" />
+          Book a call <ExternalLink className="ml-1 " size="13" />
         </Link>
       </div>
       <MobileNav />
