@@ -1,13 +1,14 @@
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 import { ArrowUpRightSquare } from "lucide-react";
+import { MobileNav } from "./mobile-nav";
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center w-full h-20">
       <div className="flex items-center">
         <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
-      <div className="flex items-center font-medium text-sm">
+      <div className="hidden gap-6 md:flex items-center font-medium text-sm">
         <Link href="/#about" rel="noopener noreferrer" className="mr-4">
           About
         </Link>
@@ -33,6 +34,7 @@ export default function Navbar() {
           Book a call <ArrowUpRightSquare className="ml-1 " size="13" />
         </Link>
       </div>
+      <MobileNav />
     </nav>
   );
 }

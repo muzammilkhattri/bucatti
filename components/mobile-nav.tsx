@@ -7,17 +7,9 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  Beaker,
-  BoxSelect,
-  Clock,
-  Dumbbell,
-  HardDrive,
-  Ruler,
-  Thermometer,
-  Triangle,
-} from "lucide-react";
+import { ArrowUpRightSquare } from "lucide-react";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -34,46 +26,31 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">
-        <MobileLink
-          href="/"
-          className="flex items-center"
-          onOpenChange={setOpen}
-        >
-          <span className="font-bold">Unitsconverter</span>
-        </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
-            <span className="font-semibold">Converters</span>
-            {converters.map((converter) => (
-              <MobileLink
-                href={converter.href}
-                onOpenChange={setOpen}
-                key={converter.title}
-              >
-                {converter.title}
-              </MobileLink>
-            ))}
-
             <MobileLink
-              href="/blog"
+              href="/#about"
               className="font-bold"
               onOpenChange={setOpen}
             >
-              Blog
+              About
             </MobileLink>
             <MobileLink
-              href="/contact"
+              href="/#services"
               className="font-bold"
               onOpenChange={setOpen}
             >
-              Contact
+              Services
+            </MobileLink>
+            <MobileLink href="/#quote" className={`font-bold`}>
+              Get a quote
             </MobileLink>
             <MobileLink
-              href="/privacy"
-              className="font-bold"
+              href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
               onOpenChange={setOpen}
+              className={`font-bold`}
             >
-              Privacy Policy
+              Book a call
             </MobileLink>
           </div>
         </ScrollArea>
