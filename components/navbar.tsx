@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex items-center">
         <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
-      <div className="hidden gap-6 md:flex items-center font-medium text-sm">
+      <div className="hidden gap-6 md:flex items-center font-medium text-md">
         <Link href="/#about" rel="noopener noreferrer" className="mr-4">
           About
         </Link>
