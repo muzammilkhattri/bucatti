@@ -41,7 +41,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
       </head>
-      <body className={`${significa.className} sm:px-40 px-5 w-full`}>
+      <body className={`${significa.className} lg:px-20 xl:px-40 px-5 w-full`}>
         <LogSnagProvider
           token="2aa19121e778b23407bc8d80765482ac"
           project="webifyr"
