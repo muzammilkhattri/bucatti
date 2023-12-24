@@ -32,6 +32,8 @@ export default function Getaquote() {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!name || !email || !budget || !message)
+      return toast.error("Please fill all the fields");
     let API = "plane_api_c07a513441fa4e449e3c9370d3e5b20b";
     let description = `Name: ${name} \n Email: ${email} \n Budget: ${budget} \n Message: ${message}`;
     //disable https check
@@ -56,16 +58,19 @@ export default function Getaquote() {
   };
 
   return (
-    <section className="flex flex-row justify-between w-full mt-20">
+    <section
+      className="flex sm:flex-row flex-col justify-between w-full mt-20"
+      id="quote"
+    >
       <Toaster position="bottom-right" />
-      <div className="flex flex-col justify-start items-start w-1/2">
+      <div className="flex flex-col justify-start items-start sm:w-1/2 w-full">
         <h1 className="text-7xl font-bold ">
           Get a quote, <br></br>
           <span className="text-gray-400">It all starts here.</span>
         </h1>
         <p className="text-2xl font-semibold"></p>
       </div>
-      <div className="flex items-center w-1/2 rounded-md">
+      <div className="flex items-center sm:w-1/2 w-full mt-10 sm:mt-0 rounded-md">
         <form className="w-full" onSubmit={(e) => handleSubmit(e)}>
           <div className="flex flex-row justify-between w-full">
             <Input
@@ -74,6 +79,7 @@ export default function Getaquote() {
               className="w-[48%]"
               onChange={(e) => setName(e.currentTarget.value)}
               required
+              value={name}
             />
             <Input
               type="text"
@@ -81,6 +87,7 @@ export default function Getaquote() {
               className="w-[48%]"
               onChange={(e) => setEmail(e.currentTarget.value)}
               required
+              value={email}
             />
           </div>
           <Textarea
@@ -90,11 +97,14 @@ export default function Getaquote() {
             placeholder="Message"
             onChange={(e) => setMessage(e.currentTarget.value)}
             required
+            value={message}
           />
           <Select
             onValueChange={(e) => {
               setBudget(e);
             }}
+            value={budget}
+            required
           >
             <SelectTrigger className="mt-4 bg-[#1b1b1b]">
               <SelectValue placeholder="Budget Range" />

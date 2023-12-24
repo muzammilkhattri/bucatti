@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="mt-40 w-full p-20">
+    <div className="mt-40 w-full">
       <h1 className="text-5xl font-bold" id="about">
         About us.
       </h1>
