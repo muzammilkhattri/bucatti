@@ -11,22 +11,14 @@ export default function Home() {
           <h1 className="md:text-7xl text-5xl font-bold ">
             Turning Clicks Into Conversions, <br></br>
             Dreams Into{" "}
-            <span className="text-gray-400">
+            <span className="text-primary">
               <br></br>Reality.
             </span>
           </h1>
           <p className="text-2xl font-semibold"></p>
         </div>
         <div className="flex justify-center mt-12 md:mt-0 items-center sm:w-1/2 w-full  rounded-md rotate-6">
-          <div className="w-2/3 bg-primary rounded-md flex justify-center">
-            <Image
-              src={Cover}
-              className="transform -scale-x-100"
-              alt="Float Doodle"
-              width={400}
-              height={400}
-            />
-          </div>
+          <div className="w-2/3 bg-[#878787] rounded-md flex justify-center"></div>
         </div>
       </section>
       <Services />

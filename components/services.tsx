@@ -70,7 +70,7 @@ export default function Services() {
       <div className="flex flex-col sm:flex-row flex-wrap justify-between">
         {services.map((service) => (
           <div key={service.title} className="flex flex-row sm:w-[40%] w-full ">
-            <Card className="mt-10 hover:border-white hover:border-3">
+            <Card className="mt-10 bg-[#262626] hover:border-white hover:border-3">
               <CardHeader>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>
