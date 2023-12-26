@@ -11,8 +11,8 @@ export default function Home() {
           <h1 className="md:text-7xl text-5xl font-bold ">
             Turning Clicks Into Conversions, <br></br>
             Dreams Into{" "}
-            <span className="text-primary">
-              <br></br>Reality.
+            <span className="text-primary underline">
+              <br></br>Reality
             </span>
           </h1>
           <p className="text-2xl font-semibold"></p>

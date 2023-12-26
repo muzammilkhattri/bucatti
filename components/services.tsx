@@ -60,7 +60,7 @@ const services = [
 ];
 export default function Services() {
   return (
-    <div className="mt-40 w-full bg-primary p-5 sm:p-20 text-primary-foreground rounded-md">
+    <div className="mt-40 w-full bg-[#262626] p-5 sm:p-20 text-primary-foreground rounded-md">
       <h1 className="text-5xl font-bold" id="services">
         Services
       </h1>
@@ -70,12 +70,14 @@ export default function Services() {
       <div className="flex flex-col sm:flex-row flex-wrap justify-between">
         {services.map((service) => (
           <div key={service.title} className="flex flex-row sm:w-[40%] w-full ">
-            <Card className="mt-10 bg-[#262626] hover:border-white hover:border-3">
+            <Card className="mt-10 bg-[#1b1b1b] text-primary-foreground hover:border-primary hover:border-2">
               <CardHeader>
                 <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>{service.description}</CardDescription>
+                <CardDescription className="text-[#FBFBFB]">
+                  {service.description}
+                </CardDescription>
               </CardContent>
               <CardFooter></CardFooter>
             </Card>
