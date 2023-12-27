@@ -1,3 +1,5 @@
+"use client";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -6,6 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 const services = [
   {
     title: "Website Development",
@@ -43,12 +52,12 @@ const services = [
       "Creating interactive and dynamic web applications, Using frameworks like React, Angular, or Vue.js, Developing single-page applications (SPAs) and progressive web apps (PWAs).",
   },
   {
-    title: "Website Maintenance and Support",
+    title: "Website Maintenance",
     description:
       "Regular updates, bug fixes, and security patches.Monitoring website performance and addressing issues promptly.",
   },
   {
-    title: "Web Hosting and Domain Management",
+    title: "Hosting Management",
     description:
       "Assisting clients with domain registration and hosting setup.Providing ongoing support for server maintenance and performance optimization.",
   },
@@ -60,30 +69,44 @@ const services = [
 ];
 export default function Services() {
   return (
-    <div className="mt-40 w-full bg-[#262626] p-5 sm:p-20 text-primary-foreground rounded-md">
+    <div className="mt-40 w-full bg-primary p-5 sm:p-20 text-primary-foreground rounded-md">
       <h1 className="text-5xl font-bold" id="services">
-        Services
+        Our services
       </h1>
-      <p className="text-2xl font-semibold text-gray">
-        Here is a list of all our services.
+      <p className="text-2xl mt-4 font-semibold text-gray-200">
+        List of all our services.
       </p>
-      <div className="flex flex-col sm:flex-row flex-wrap justify-between">
-        {services.map((service) => (
-          <div key={service.title} className="flex flex-row sm:w-[40%] w-full ">
-            <Card className="mt-10 bg-[#1b1b1b] text-primary-foreground hover:border-primary hover:border-2">
-              <CardHeader>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-[#FBFBFB]">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-              <CardFooter></CardFooter>
-            </Card>
-          </div>
-        ))}
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+          slidesToScroll: 1,
+        }}
+        className="w-full mt-8"
+      >
+        <CarouselContent>
+          {services.map((service) => (
+            <CarouselItem
+              key={service.title}
+              className="md:basis-1/2 lg:basis-1/3"
+            >
+              <div className="p-1">
+                <Card className="h-[300px]">
+                  <CardHeader className="text-2xl font-bold">
+                    {service.title}
+                  </CardHeader>
+
+                  <CardContent className="flex aspect-square items-start justify-center p-6">
+                    <span className="text-xl">{service.description}</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="bg-[#151419]" />
+        <CarouselNext className="bg-[#151419]" />
+      </Carousel>
+      <div className="flex flex-col sm:flex-row flex-wrap justify-between"></div>
     </div>
   );
 }
