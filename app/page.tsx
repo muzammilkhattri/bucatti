@@ -20,8 +20,8 @@ export default function Home() {
         <div className="flex justify-center mt-12 md:mt-0 items-center sm:w-1/2 w-full  rounded-md rotate-6"></div>
       </section>
       <Services />
-      <Getaquote />
       <About />
+      <Getaquote />
     </main>
   );
 }
