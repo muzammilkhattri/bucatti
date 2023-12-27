@@ -9,7 +9,7 @@ export default function Process() {
   return (
     <section
       className="flex sm:flex-row flex-col justify-between w-full mt-20"
-      id="quote"
+      id="process"
     >
       <div className="flex flex-col justify-start items-start sm:w-1/2 w-full">
         <h1 className="text-7xl font-bold ">
@@ -27,8 +27,8 @@ export default function Process() {
               Send us a message.
             </h3>
             <p className="mb-4 text-base font-normal text-gray-400">
-              Reach out to us with your vision, and we'll kickstart the journey
-              to transform your ideas into a thriving digital presence.
+              Reach out to us with your vision, and we will kickstart the
+              journey to transform your ideas into a thriving digital presence.
             </p>
             <Link
               href="/#quote"
