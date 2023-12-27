@@ -15,6 +15,14 @@ export default function Navbar() {
       </div>
       <div className="hidden gap-2 md:flex items-center font-medium text-md">
         <Link
+          href="/#about"
+          rel="noopener noreferrer"
+          className="mr-4 transition duration-200 group"
+        >
+          Process
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
+        </Link>
+        <Link
           href="/#services"
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
