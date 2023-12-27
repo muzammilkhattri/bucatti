@@ -42,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${significa.className} xl:px-48 px-5 w-full bg-[#151419]`}
+        className={`${significa.className} xl:px-56 px-5 w-full bg-[#151419]`}
       >
         <LogSnagProvider
           token="2aa19121e778b23407bc8d80765482ac"

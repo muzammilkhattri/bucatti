@@ -11,14 +11,24 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center w-full h-20">
       <div className="flex items-center">
-        <h1 className="font-bold text-3xl">Webifyr</h1>
+        <h1 className="font-bold text-2xl">Webifyr</h1>
       </div>
-      <div className="hidden gap-6 md:flex items-center font-medium text-lg">
-        <Link href="/#services" rel="noopener noreferrer" className="mr-4">
+      <div className="hidden gap-2 md:flex items-center font-medium text-md">
+        <Link
+          href="/#services"
+          rel="noopener noreferrer"
+          className="mr-4 transition duration-200 group"
+        >
           Services
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
-        <Link href="/#about" rel="noopener noreferrer" className="mr-4">
+        <Link
+          href="/#about"
+          rel="noopener noreferrer"
+          className="mr-4 transition duration-200 group"
+        >
           About
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
 
         <Link
