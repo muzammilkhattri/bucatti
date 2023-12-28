@@ -74,7 +74,7 @@ export default function Process() {
               4
             </time>
             <h3 className="text-lg font-semibold text-white">
-              Let's collaborate!
+              Lets collaborate!
             </h3>
             <p className="text-base font-normal text-gray-400">
               Experience the journey firsthand with regular updates as we reach
