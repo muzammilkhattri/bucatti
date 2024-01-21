@@ -69,13 +69,11 @@ const services = [
 ];
 export default function Services() {
   return (
-    <div className="mt-40 w-full bg-primary p-5 sm:p-20 text-primary-foreground rounded-md">
-      <h1 className="text-5xl font-bold" id="services">
+    <div className="mt-40 w-full py-5 sm:py-20 text-primary-foreground rounded-md">
+      <h1 className="text-6xl  font-bold" id="services">
         Our services
       </h1>
-      <p className="text-2xl mt-4 font-semibold text-gray-200">
-        List of all our services.
-      </p>
+      <p className="text-xl mt-4  text-gray-300">List of all our services.</p>
       <Carousel
         opts={{
           align: "start",

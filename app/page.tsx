@@ -10,7 +10,7 @@ import { Calendar } from "lucide-react";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-20">
-      <section className="flex flex-col w-full justify-center items-center mt-4">
+      <section className="flex flex-col w-full justify-center items-center ">
         <div className="border-2 text-sm rounded-full py-2 px-4 flex items-center justify-between ">
           <span className="relative flex h-2 w-2 mr-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75 duration-1000"></span>
@@ -42,7 +42,7 @@ export default function Home() {
             className={`${buttonVariants({
               variant: "outline",
               size: "lg",
-            })}  text-[15px]`}
+            })} text-[15px]`}
           >
             Book a Call <Calendar className="ml-2 " size="16" />
           </Link>
