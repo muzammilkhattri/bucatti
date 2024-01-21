@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center w-full h-20">
       <div className="flex items-center">
-        <h1 className="font-bold text-2xl">Webifyr</h1>
+        <h1 className="font-bold text-3xl">Webifyr</h1>
       </div>
       <div className="hidden gap-2 md:flex items-center font-medium text-md">
         <Link
