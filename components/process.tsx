@@ -12,7 +12,7 @@ export default function Process() {
       id="process"
     >
       <div className="flex flex-col justify-start items-start sm:w-1/2 w-full">
-        <h1 className="text-7xl font-bold ">
+        <h1 className="text-6xl font-bold ">
           How it works. <br></br>
         </h1>
       </div>
