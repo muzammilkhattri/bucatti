@@ -1,37 +1,57 @@
 import Image from "next/image";
-import Cover from "../public/cover.svg";
 import Services from "@/components/services";
 import Getaquote from "@/components/getaquote";
 import About from "@/components/aboutus";
+import Footer from "@/components/footer";
+import { buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import Process from "@/components/process";
+import { Calendar } from "lucide-react";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-20">
-      <section className="flex flex-col md:flex-row justify-between w-full">
-        <div className="flex flex-col justify-center items-start md:w-1/2 w-full">
-          <h1 className="md:text-7xl text-5xl font-bold ">
-            Turning Clicks Into Conversions, <br></br>
-            Dreams Into{" "}
-            <span className="text-gray-400">
-              <br></br>Reality.
-            </span>
-          </h1>
-          <p className="text-2xl font-semibold"></p>
+      <section className="flex flex-col w-full justify-center items-center ">
+        <div className="border-2 text-sm rounded-full py-2 px-4 flex items-center justify-between ">
+          <span className="relative flex h-2 w-2 mr-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75 duration-1000"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+          </span>
+          Available for projects
         </div>
-        <div className="flex justify-center mt-12 md:mt-0 items-center sm:w-1/2 w-full  rounded-md rotate-6">
-          <div className="w-2/3 bg-primary rounded-md flex justify-center">
-            <Image
-              src={Cover}
-              className="transform -scale-x-100"
-              alt="Float Doodle"
-              width={400}
-              height={400}
-            />
-          </div>
+        <h1 className="md:text-7xl text-5xl font-bold md:leading-[5rem] text-center mt-10">
+          Building Digital Dreams,<br></br> Crafting{" "}
+          <span className="text-primary">Tomorrow.</span>
+        </h1>
+        <p className="text-xl text-gray-300 max-w-2xl mt-6 text-center">
+          We are a web development agency that helps businesses build their
+          digital presence. We provide a wide range of Services
+        </p>
+        <div className="mt-8 flex space-x-2">
+          <Link
+            href="/#quote"
+            className={`${buttonVariants({
+              variant: "default",
+              size: "lg",
+            })} mr-2 text-[15px] w-32`}
+          >
+            Get a Quote
+          </Link>
+          <Link
+            href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
+            target="_blank"
+            className={`${buttonVariants({
+              variant: "outline",
+              size: "lg",
+            })} text-[15px]`}
+          >
+            Book a Call <Calendar className="ml-2 " size="16" />
+          </Link>
         </div>
       </section>
       <Services />
-      <Getaquote />
+      <Process />
       <About />
+      <Getaquote />
     </main>
   );
 }
