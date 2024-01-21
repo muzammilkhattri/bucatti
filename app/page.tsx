@@ -13,7 +13,7 @@ export default function Home() {
             Building Digital <br></br>
             Dreams, Crafting{" "}
             <span className="text-primary">
-              <br></br>Tomorrow
+              <br></br>Tomorrow.
             </span>
           </h1>
           <p className="text-2xl font-semibold"></p>
