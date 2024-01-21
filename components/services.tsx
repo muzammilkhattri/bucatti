@@ -70,7 +70,7 @@ const services = [
 export default function Services() {
   return (
     <div className="mt-40 w-full py-5 sm:py-20 text-primary-foreground rounded-md">
-      <h1 className="text-6xl  font-bold" id="services">
+      <h1 className="text-6xl font-bold" id="services">
         Our services
       </h1>
       <p className="text-xl mt-4  text-gray-300">List of all our services.</p>
