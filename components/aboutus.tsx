@@ -16,7 +16,7 @@ export default function About() {
       <h1 className="text-5xl font-bold" id="about">
         About us.
       </h1>
-      <div className="flex justify-evenly space-x-4 mt-10">
+      <div className="flex flex-col md:flex-row justify-evenly space-x-4 mt-10">
         <div className="bg-card p-4 rounded-md shadow-sm mt-4 w-[50%]">
           <p className="text-2xl font-semibold text-gray-400 flex items-center">
             <HelpCircle className="mr-2" /> Who we are.
