@@ -32,7 +32,7 @@ export default function Home() {
             className={`${buttonVariants({
               variant: "default",
               size: "lg",
-            })} mr-2 text-[15px] w-32`}
+            })} mr-2 text-[15px] w-32 `}
           >
             Get a Quote
           </Link>
@@ -42,7 +42,7 @@ export default function Home() {
             className={`${buttonVariants({
               variant: "outline",
               size: "lg",
-            })} text-[15px]`}
+            })} text-[15px] `}
           >
             Book a Call <Calendar className="ml-2 " size="16" />
           </Link>
