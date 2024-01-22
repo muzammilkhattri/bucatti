@@ -17,11 +17,11 @@ export default function About() {
         About us.
       </h1>
       <div className="flex flex-col md:flex-row justify-evenly space-x-4 mt-10">
-        <div className="bg-card p-4 rounded-md shadow-sm mt-4 w-[50%]">
-          <p className="text-2xl font-semibold text-gray-400 flex items-center">
-            <HelpCircle className="mr-2" /> Who we are.
+        <div className="bg-card p-8 rounded-md shadow-sm mt-4 w-[50%]">
+          <p className="text-2xl font-semibold  flex items-center">
+            <HelpCircle className="mr-2" /> Who we are
           </p>
-          <div className="mt-4">
+          <div className="mt-4 text-gray-400">
             <p>
               We are a team of young and passionate developers who are dedicated
               to providing the best services to our clients. We believe in the
@@ -30,17 +30,17 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="bg-card p-4 rounded-md shadow-sm mt-4 w-[50%]">
-          <p className="text-2xl font-semibold text-gray-400 flex items-center">
+        <div className="bg-card p-8 rounded-md shadow-sm mt-4 w-[50%]">
+          <p className="text-2xl font-semibold flex items-center">
             <Rocket className="mr-2" /> Our Mission
           </p>
-          <div className="mt-4">
+          <div className="mt-4 text-gray-400 ">
             <p>
-              Our Mission At Webifyr, our mission is to empower businesses with
-              cutting-edge web solutions that not only meet but exceed their
-              expectations. We believe in the transformative power of
-              well-executed web design and development to elevate brands, drive
-              engagement, and deliver measurable results.
+              Our Mission At Webifyr is to empower businesses with cutting-edge
+              web solutions that not only meet but exceed their expectations. We
+              believe in the transformative power of well-executed web design
+              and development to elevate brands, drive engagement, and deliver
+              measurable results.
             </p>
           </div>
         </div>
