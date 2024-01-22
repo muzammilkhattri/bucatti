@@ -9,8 +9,8 @@ import Process from "@/components/process";
 import { Calendar } from "lucide-react";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-20">
-      <section className="flex flex-col w-full justify-center items-center ">
+    <main className="flex min-h-screen flex-col items-center space-y-20 justify-between py-20 xl:px-56 px-5">
+      <section className="flex flex-col w-full justify-center items-center">
         <div className="border-2 text-sm rounded-full py-2 px-4 flex items-center justify-between ">
           <span className="relative flex h-2 w-2 mr-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75 duration-1000"></span>

@@ -4,7 +4,7 @@ import { MobileNav } from "./mobile-nav";
 import { Calendar } from "lucide-react";
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center w-full h-20">
+    <nav className="flex justify-between items-center w-full h-20 xl:px-56 px-5">
       <div className="flex items-center">
         <h1 className="font-bold text-3xl">Webifyr</h1>
       </div>

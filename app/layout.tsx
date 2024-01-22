@@ -41,9 +41,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
       </head>
-      <body
-        className={`${significa.className} xl:px-56 px-5 w-full bg-[#151419]`}
-      >
+      <body className={`${significa.className}  w-full bg-[#151419]`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full">
           <div className="relative h-full w-full bg-black">
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
