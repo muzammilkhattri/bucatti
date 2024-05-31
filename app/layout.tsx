@@ -25,8 +25,8 @@ const significa = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Webifyr",
-  description: "Webifyr is a web development agency.",
+  title: "Bucatti",
+  description: "Bucatti on solana.",
 };
 
 export default function RootLayout({
