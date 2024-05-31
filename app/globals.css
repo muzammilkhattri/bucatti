@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 9%;
-    --foreground: 0 0% 93%;
+    --background: 0 0% 9;
+    --foreground: 30 0% 9%;
 
     --card: 0 0% 9%;
     --card-foreground: 0 0% 93%;
@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 25, 92%, 51%;
+    --primary: 354, 77%, 48%;
     --primary-foreground: 0 0% 98.4%;
 
     --secondary: 210 40% 96.1%;
@@ -64,3 +64,5 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+

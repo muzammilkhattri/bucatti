@@ -1,12 +1,19 @@
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
-import { Calendar } from "lucide-react";
+import { CircleDollarSign } from "lucide-react";
+import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="flex justify-between items-center w-full h-20 xl:px-56 px-5">
       <div className="flex items-center">
-        <h1 className="font-bold text-3xl">Webifyr</h1>
+        <Image
+          src={"/logo.png"}
+          width={200}
+          height={200}
+          alt="Bucatti Logo"
+          className="mt-2"
+        />
       </div>
       <div className="hidden gap-2 md:flex items-center font-medium text-md">
         <Link
@@ -14,7 +21,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
         >
-          Process
+          About
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
         <Link
@@ -22,7 +29,7 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
         >
-          Services
+          Roadmap
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
         <Link
@@ -30,35 +37,18 @@ export default function Navbar() {
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
         >
-          About
+          How to buy
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
         <Link
-          href="/#quote"
-          rel="noopener noreferrer"
-          className="mr-4 transition duration-200 group"
-        >
-          Quote
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
-        </Link>
-        {/*         <Link
-          href="/#quote"
-          className={`${buttonVariants({
-            variant: "default",
-            size: "lg",
-          })} mr-2 text-[15px] w-32`}
-        >
-          Get a Quote
-        </Link> */}
-        <Link
-          href="https://cal.com/webifyr/30min?date=2023-12-18&month=2023-12"
+          href="https://jupiter-terminal.dexscreener.com/?inputMint=4rTvetapwP2BEPYq64TVmDAzLdL55jxxx41erfbKxpHG&outputMint=So11111111111111111111111111111111111111112"
           target="_blank"
           className={`${buttonVariants({
             variant: "outline",
             size: "lg",
-          })}  text-[15px]`}
+          })} text-[15px] `}
         >
-          Book a Call <Calendar className="ml-2 " size="16" />
+          Buy Now <CircleDollarSign className="ml-2 " size="16" />
         </Link>
       </div>
       <MobileNav />
