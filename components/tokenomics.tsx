@@ -19,7 +19,7 @@ import { TextRevealCard } from "./ui/text-reveal-card";
 export function Tokenomics() {
   return (
     <div className="mt-20 w-full py-5 sm:py-10  rounded-md ">
-      <h1 className="text-5xl font-bold" id="services">
+      <h1 className="text-5xl font-bold" id="tokenomics">
         Token Info
       </h1>
       <BentoGrid className="max-w-8xl mx-auto md:auto-rows-[20rem] mt-10">
