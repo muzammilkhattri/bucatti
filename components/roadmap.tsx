@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function Roadmap() {
   return (
     <div className="mt-20 w-full py-5 sm:py-10  rounded-md ">
-      <h1 className="text-5xl font-bold" id="services">
+      <h1 className="text-5xl font-bold" id="roadmap">
         Roadmap
       </h1>
       <Carousel className="w-full mt-20">

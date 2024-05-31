@@ -25,7 +25,7 @@ export default function Navbar() {
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
         <Link
-          href="/#services"
+          href="/#roadmap"
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
         >
@@ -33,7 +33,7 @@ export default function Navbar() {
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
         </Link>
         <Link
-          href="/#about"
+          href="/#process"
           rel="noopener noreferrer"
           className="mr-4 transition duration-200 group"
         >
